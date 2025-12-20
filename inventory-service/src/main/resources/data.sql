@@ -1,0 +1,16 @@
+INSERT INTO products (title, price, stock) VALUES
+('Pen', 10, 500),
+('Pencil', 5, 400),
+('Notebook', 50, 200),
+('Eraser', 3, 300),
+('Sharpener', 7, 250),
+('Scale', 20, 180),
+('Marker', 25, 150),
+('Highlighter', 30, 120),
+('File', 40, 100),
+('Stapler', 120, 80),
+('Glue', 35, 90),
+('Paper Bundle', 250, 60),
+('Calculator', 350, 40),
+('Bag', 900, 30),
+('Bottle', 150, 70);
