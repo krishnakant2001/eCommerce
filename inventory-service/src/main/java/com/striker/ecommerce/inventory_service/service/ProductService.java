@@ -1,5 +1,7 @@
 package com.striker.ecommerce.inventory_service.service;
 
+import com.striker.ecommerce.inventory_service.dto.OrderRequestDto;
+import com.striker.ecommerce.inventory_service.dto.OrderRequestItemDto;
 import com.striker.ecommerce.inventory_service.dto.ProductDto;
 import com.striker.ecommerce.inventory_service.entity.Product;
 import com.striker.ecommerce.inventory_service.repository.ProductRepository;
@@ -7,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -34,5 +37,30 @@ public class ProductService {
         return inventory.map(product -> modelMapper.map(product, ProductDto.class))
                 .orElseThrow(() -> new RuntimeException("Inventory not Found"));
 
+    }
+
+    @Transactional
+    public Double reduceStocks(OrderRequestDto orderRequestDto) {
+        log.info("Reducing the stocks");
+
+        double totalPrice = 0.0;
+
+        for(OrderRequestItemDto orderRequestItemDto : orderRequestDto.getItems()) {
+            Long productId = orderRequestItemDto.getProductId();
+            Integer quantity = orderRequestItemDto.getQuantity();
+
+            Product product = productRepository.findById(productId).orElseThrow(() ->
+                    new RuntimeException("Product not found with id: " + productId));
+
+            if(product.getStock() < quantity) {
+                throw new RuntimeException("Product can not be fulfilled for given quantity");
+            }
+
+            product.setStock(product.getStock() - quantity);
+            productRepository.save(product);
+            totalPrice += quantity * (product.getPrice());
+        }
+
+        return totalPrice;
     }
 }
