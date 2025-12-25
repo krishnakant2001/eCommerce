@@ -1,3 +1,6 @@
+jwt:
+  secretKey:${JWT_SECRET_KEY}
+
 spring:
   application:
     name: api-gateway
@@ -13,6 +16,12 @@ spring:
           filters:
             - StripPrefix=2
             - name: LoggingOrdersFilter
+            - name: Authentication
+              args:
+                isEnabled: true
+#            - name: Authorization
+#              args:
+#                allowedRoles: ADMIN, SUPER_ADMIN
 
         - id: inventory-service
           uri: lb://INVENTORY-SERVICE
@@ -21,6 +30,7 @@ spring:
           filters:
             - StripPrefix=2
             - AddRequestHeader=X-Custom-Header, Krishnakant
+            - name: Authentication
 
 #eureka configuration
 eureka:
