@@ -1,0 +1,63 @@
+27-12-2025 22:20:52.231 [main] [-] INFO  inventory-service-c.s.e.i.InventoryServiceApplication.logStarting - Starting InventoryServiceApplication using Java 21.0.7 with PID 35502 (/Users/krishnakantnagvanshi/SpringBoot/MicroserviceProject/eCommerce/inventory-service/target/classes started by krishnakantnagvanshi in /Users/krishnakantnagvanshi/SpringBoot/MicroserviceProject/eCommerce)
+27-12-2025 22:20:52.232 [main] [-] INFO  inventory-service-c.s.e.i.InventoryServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+27-12-2025 22:20:52.247 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+27-12-2025 22:20:52.247 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=inventory-service, profiles=[default], label=null, version=cce132ec1be899a06129afc6605d1cba976fa3a8, state=
+27-12-2025 22:20:52.641 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+27-12-2025 22:20:52.704 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
+27-12-2025 22:20:52.853 [main] [-] INFO  inventory-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=db5a82fc-f9e1-367f-b707-fb1bcf7c3ea1
+27-12-2025 22:20:53.025 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9010 (http)
+27-12-2025 22:20:53.030 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9010"]
+27-12-2025 22:20:53.031 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+27-12-2025 22:20:53.031 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.50]
+27-12-2025 22:20:53.058 [main] [-] INFO  inventory-service-o.a.c.c.C.[.[localhost].[/inventory].log - Initializing Spring embedded WebApplicationContext
+27-12-2025 22:20:53.059 [main] [-] INFO  inventory-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 812 ms
+27-12-2025 22:20:53.277 [main] [-] INFO  inventory-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+27-12-2025 22:20:53.402 [main] [-] INFO  inventory-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.6.39.Final
+27-12-2025 22:20:53.419 [main] [-] INFO  inventory-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+27-12-2025 22:20:53.538 [main] [-] INFO  inventory-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+27-12-2025 22:20:53.550 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+27-12-2025 22:20:53.623 [main] [-] INFO  inventory-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53a3fc8b
+27-12-2025 22:20:53.624 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+27-12-2025 22:20:53.660 [main] [-] INFO  inventory-service-o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+27-12-2025 22:20:54.043 [main] [-] INFO  inventory-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+27-12-2025 22:20:54.400 [main] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+27-12-2025 22:20:54.575 [main] [-] WARN  inventory-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+27-12-2025 22:20:54.599 [main] [-] INFO  inventory-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'order-service' URL not provided. Will try picking an instance via load-balancing.
+27-12-2025 22:20:54.835 [main] [-] INFO  inventory-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+27-12-2025 22:20:54.843 [main] [-] WARN  inventory-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+27-12-2025 22:20:54.848 [main] [-] INFO  inventory-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 16 endpoints beneath base path '/actuator'
+27-12-2025 22:20:54.879 [main] [-] INFO  inventory-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+27-12-2025 22:20:54.889 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+27-12-2025 22:20:54.890 [main] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+27-12-2025 22:20:54.893 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+27-12-2025 22:20:54.893 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+27-12-2025 22:20:54.893 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+27-12-2025 22:20:54.893 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+27-12-2025 22:20:54.893 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+27-12-2025 22:20:54.893 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+27-12-2025 22:20:54.893 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+27-12-2025 22:20:54.974 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+27-12-2025 22:20:54.975 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+27-12-2025 22:20:54.975 [main] [-] INFO  inventory-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+27-12-2025 22:20:54.976 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1766854254976 with initial instances count: 4
+27-12-2025 22:20:54.978 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application INVENTORY-SERVICE with eureka with status UP
+27-12-2025 22:20:54.978 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1766854254978, current=UP, previous=STARTING]
+27-12-2025 22:20:54.978 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/192.168.0.110:inventory-service:9010: registering service...
+27-12-2025 22:20:54.979 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9010"]
+27-12-2025 22:20:54.985 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9010 (http) with context path '/inventory'
+27-12-2025 22:20:54.985 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9010
+27-12-2025 22:20:54.998 [main] [-] INFO  inventory-service-c.s.e.i.InventoryServiceApplication.logStarted - Started InventoryServiceApplication in 4.245 seconds (process running for 4.619)
+27-12-2025 22:20:55.004 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/192.168.0.110:inventory-service:9010 - registration status: 204
+27-12-2025 22:21:05.319 [http-nio-9010-exec-1] [-] INFO  inventory-service-o.a.c.c.C.[.[localhost].[/inventory].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+27-12-2025 22:21:05.320 [http-nio-9010-exec-1] [-] INFO  inventory-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+27-12-2025 22:21:05.323 [http-nio-9010-exec-1] [-] INFO  inventory-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 3 ms
+27-12-2025 22:21:05.383 [http-nio-9010-exec-1] [69500e7978e92097df9777332f8e1437-ea6e915264737e5a] INFO  inventory-service-c.s.e.i.service.ProductService.reduceStocks - Reducing the stocks
+27-12-2025 22:25:54.898 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+27-12-2025 22:30:54.913 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

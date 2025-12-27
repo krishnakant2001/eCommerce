@@ -1,0 +1,122 @@
+27-12-2025 22:20:45.276 [main] [-] INFO  order-service-c.s.e.o.OrderServiceApplication.logStarting - Starting OrderServiceApplication using Java 21.0.7 with PID 35495 (/Users/krishnakantnagvanshi/SpringBoot/MicroserviceProject/eCommerce/order-service/target/classes started by krishnakantnagvanshi in /Users/krishnakantnagvanshi/SpringBoot/MicroserviceProject/eCommerce)
+27-12-2025 22:20:45.277 [main] [-] INFO  order-service-c.s.e.o.OrderServiceApplication.logStartupProfileInfo - The following 1 profile is active: "dev"
+27-12-2025 22:20:45.292 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+27-12-2025 22:20:45.292 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=order-service, profiles=[default], label=null, version=cce132ec1be899a06129afc6605d1cba976fa3a8, state=
+27-12-2025 22:20:45.292 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+27-12-2025 22:20:45.292 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=order-service, profiles=[dev], label=null, version=cce132ec1be899a06129afc6605d1cba976fa3a8, state=
+27-12-2025 22:20:45.768 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+27-12-2025 22:20:45.837 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interface.
+27-12-2025 22:20:45.989 [main] [-] INFO  order-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=0047670c-4e05-3769-93c8-7bd7e3b82b00
+27-12-2025 22:20:46.296 [main] [-] INFO  order-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+27-12-2025 22:20:46.302 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+27-12-2025 22:20:46.303 [main] [-] INFO  order-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+27-12-2025 22:20:46.303 [main] [-] INFO  order-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.50]
+27-12-2025 22:20:46.342 [main] [-] INFO  order-service-o.a.c.c.C.[.[localhost].[/orders].log - Initializing Spring embedded WebApplicationContext
+27-12-2025 22:20:46.343 [main] [-] INFO  order-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1049 ms
+27-12-2025 22:20:46.701 [main] [-] INFO  order-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+27-12-2025 22:20:46.728 [main] [-] INFO  order-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.6.39.Final
+27-12-2025 22:20:46.743 [main] [-] INFO  order-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+27-12-2025 22:20:46.854 [main] [-] INFO  order-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+27-12-2025 22:20:46.866 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+27-12-2025 22:20:46.946 [main] [-] INFO  order-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c960f64
+27-12-2025 22:20:46.947 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+27-12-2025 22:20:46.990 [main] [-] INFO  order-service-o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+27-12-2025 22:20:47.353 [main] [-] INFO  order-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+27-12-2025 22:20:47.672 [main] [-] WARN  order-service-o.h.t.s.i.ExceptionHandlerLoggedImpl.handleException - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table order_item 
+       drop 
+       foreign key FKt4dc2r9nbvbujrljv3e23iibt" via JDBC [Table 'orderdb.order_item' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table order_item 
+       drop 
+       foreign key FKt4dc2r9nbvbujrljv3e23iibt" via JDBC [Table 'orderdb.order_item' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:479)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:245)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:218)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:186)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:116)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.striker.ecommerce.order_service.OrderServiceApplication.main(OrderServiceApplication.java:12)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'orderdb.order_item' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 39 common frames omitted
+27-12-2025 22:20:47.712 [main] [-] INFO  order-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+27-12-2025 22:20:47.871 [main] [-] WARN  order-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+27-12-2025 22:20:47.931 [main] [-] INFO  order-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'inventory-service' URL not provided. Will try picking an instance via load-balancing.
+27-12-2025 22:20:48.505 [main] [-] INFO  order-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+27-12-2025 22:20:48.524 [main] [-] WARN  order-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+27-12-2025 22:20:48.533 [main] [-] INFO  order-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 26 endpoints beneath base path '/actuator'
+27-12-2025 22:20:48.568 [main] [-] INFO  order-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+27-12-2025 22:20:48.583 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+27-12-2025 22:20:48.584 [main] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+27-12-2025 22:20:48.587 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+27-12-2025 22:20:48.587 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+27-12-2025 22:20:48.587 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+27-12-2025 22:20:48.587 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+27-12-2025 22:20:48.587 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+27-12-2025 22:20:48.587 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+27-12-2025 22:20:48.587 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+27-12-2025 22:20:48.695 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+27-12-2025 22:20:48.696 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+27-12-2025 22:20:48.696 [main] [-] INFO  order-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+27-12-2025 22:20:48.697 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1766854248697 with initial instances count: 4
+27-12-2025 22:20:48.702 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application ORDER-SERVICE with eureka with status UP
+27-12-2025 22:20:48.702 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1766854248702, current=UP, previous=STARTING]
+27-12-2025 22:20:48.702 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/192.168.0.110:order-service:9020: registering service...
+27-12-2025 22:20:48.702 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9020"]
+27-12-2025 22:20:48.711 [main] [-] INFO  order-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/orders'
+27-12-2025 22:20:48.711 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+27-12-2025 22:20:48.722 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/192.168.0.110:order-service:9020 - registration status: 204
+27-12-2025 22:20:48.730 [main] [-] INFO  order-service-c.s.e.o.OrderServiceApplication.logStarted - Started OrderServiceApplication in 6.131 seconds (process running for 6.602)
+27-12-2025 22:21:05.128 [http-nio-9020-exec-1] [-] INFO  order-service-o.a.c.c.C.[.[localhost].[/orders].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+27-12-2025 22:21:05.129 [http-nio-9020-exec-1] [-] INFO  order-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+27-12-2025 22:21:05.139 [http-nio-9020-exec-1] [-] INFO  order-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 10 ms
+27-12-2025 22:21:05.202 [http-nio-9020-exec-1] [69500e7978e92097df9777332f8e1437-6e01e89f5991325c] INFO  order-service-c.s.e.o.service.OrdersService.createOrder - Calling the createOrder method....
+27-12-2025 22:25:48.593 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+27-12-2025 22:30:48.601 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
