@@ -1,6 +1,6 @@
-spring.application.name: config-server
-
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
@@ -11,9 +11,5 @@ spring:
           default-label: master
 server:
   port: 8888
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
 
 
